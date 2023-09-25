@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+   <script src="https://kit.fontawesome.com/d92e5996c7.js" crossorigin="anonymous"></script>
+   <!-- <script defer src="validation.js"></script> -->
+
+ 
+</head>
+<body>
+    <div class="container"> 
+       <div action="" id="form-box" class="form-box">
+
+          <h1>Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input id="fname" type="text" placeholder="first Name" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input id="lname" type="text" placeholder="Last Name" required>
+                </div>
+                      
+   
+                <div class="input-field">
+                    <i class="fa-solid fa-venus-mars"></i>
+                   
+                    <select id="gender" name="gender" required>
+                     <option value="male">Male</option>
+                       <option value="female">Female</option>
+                      <option value="other">Other</option>
+                      </select>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-address-card"></i>
+                    <input id="adress" type="text" placeholder="Adress" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-phone"></i>
+                    <input id="phone" type="tel" placeholder="Phone Number" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <input id="father" type="text" placeholder="Fathers Names" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input id="email" type="email" placeholder="Email Adress" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <input id="dob" type="date" id="datePicker" name="date of birth" required>
+                    
+                </div>
+
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="password" type="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="password2" type="password" placeholder="retype password" required>
+          
+                </div>
+                <input type="text" id="errorP">
+                <p>Bunani cyusa prince with ID 24001</p>
+               
+            </div>
+
+
+           <div class="btn-field">
+           <button type="submit">sign up</button>  
+        </div> 
+        
+             <div>
+             <p>already have an account?</p>
+             </div>
+
+        <div class="btnfield-signin">
+            <a href="signin.html" class="buttonfield-signin">signin</a> 
+        </div>
+           <script>
+            const form = document.getElementById("form-box");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const adress = document.getElementById("adress");
+const phone = document.getElementById("phone");
+const father = document.getElementById("father");
+const email = document.getElementById("email");
+const dob = document.getElementById("dob");
+const password = document.getElementById("password");
+const password2 = document.getElementById("password2");
+const errorP = document.getElementById("errorP");
+
+
+
+form.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    if(password !== password2) {
+        errorP.value = "Password don't match"
+        console.log("do not mathc");
+    }
+});
+
+fname.addEventListener("change",() =>{
+    if(fname.ariaValueMax.trim() === ""){
+        fname.classList.add("error");
+        fname.classList.remove("success");
+    }else{
+        fname.classList.add("success");
+        fname.classList.remove("error");
+    }
+});
+
+lname.addEventListener("change",() =>{
+    if(lname.ariaValueMax.trim() === ""){
+        lname.classList.add("error");
+        lname.classList.remove("success");
+    }else{
+        lname.classList.add("success");
+        lname.classList.remove("error");
+    }
+});
+
+adress.addEventListener("change",() =>{
+    if(adress.ariaValueMax.trim() === ""){
+        adress.classList.add("error");
+        adress.classList.remove("success");
+    }else{
+        adress.classList.add("success");
+        adress.classList.remove("error");
+    }
+});
+
+phone.addEventListener("change",() =>{
+    if(phone.ariaValueMax.trim() === ""){
+        phone.classList.add("error");
+        phone.classList.remove("success");
+    }else{
+        phone.classList.add("success");
+        phone.classList.remove("error");
+    }
+});
+
+father.addEventListener("change",() =>{
+    if(father.ariaValueMax.trim() === ""){
+        father.classList.add("error");
+        father.classList.remove("success");
+    }else{
+        father.classList.add("success");
+        father.classList.remove("error");
+    }
+});
+
+email.addEventListener("change",() =>{
+    if(email.ariaValueMax.trim() === ""){
+        email.classList.add("error");
+        email.classList.remove("success");
+    }else{
+        email.classList.add("success");
+        email.classList.remove("error");
+    }
+});
+
+dob.addEventListener("change",() =>{
+    if(dob.ariaValueMax.trim() === ""){
+        dob.classList.add("error");
+        dob.classList.remove("success");
+    }else{
+        dob.classList.add("success");
+        dob.classList.remove("error");
+    }
+});
+
+password.addEventListener("change",() =>{
+    if(password.ariaValueMax.trim() === ""){
+        password.classList.add("error");
+        password.classList.remove("success");
+    }else{
+        password.classList.add("success");
+        password.classList.remove("error");
+    }
+});
+
+password2.addEventListener("change",() =>{
+    if(password2.ariaValueMax.trim() === ""){
+        password2.classList.add("error");
+        password2.classList.remove("success");
+    }else{
+        password2.classList.add("success");
+        password2.classList.remove("error");
+    }
+});
+
+
+           </script>
+        </form> 
+    </div>
+    </div>
+</body>
+</html>
